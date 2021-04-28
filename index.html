@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="root">
+
+        <header>
+            <div>
+                <img src="img/download.png" alt="">
+            </div>
+        </header>
+        <main>
+            <div class="cd-container">
+
+                <div v-for="(cds,index) in playlist" class="cds">
+
+                    <div class="cd-img">
+                        <img :src="cds.poster" alt="">
+                    </div>
+                    <div class="cd-title">{{cds.title}}</div>
+                    <div class="cd-author">{{cds.author}}</div>
+                    <div class="cd-year">{{cds.year}}</div>
+
+                </div>
+
+
+            </div>
+        </main>
+
+    </div>
+    
+    <!-- <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script> -->
+    <script src="js/script.js"></script>
+</body>
+</html>
