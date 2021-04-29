@@ -22,10 +22,20 @@
             </div>
         </header>
         <main>
+            <!-- per fare una select -->
+            <div class="select">
+                <label for="genre-select"></label>
+                <select id="genre-select" v-model="select">
+                   <option v-for="(cds,index) in options">{{cds}}</option>
+                </select>
+            </div>
+            <!-- fine pt1 (per fare una select) -->
+
+
             <div class="cd-container">
-
-                <div v-for="(cds,index) in playlist" class="cds">
-
+                <!-- per fare una select -->
+                <div v-for="cds in playlist" class="cds" v-if="select == 'All' || select == cds.genre" >
+                <!-- fine pt2 (per fare una select) -->
                     <div class="cd-img">
                         <img :src="cds.poster" alt="">
                     </div>
